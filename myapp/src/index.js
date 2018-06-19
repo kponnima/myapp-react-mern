@@ -8,11 +8,13 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import Login from './components/Login';
 import Register from './components/Register';
+import Home from './components/Home'; 
 
 ReactDOM.render(
   <Router>
       <div>
-        <Route exact path='/' component={Login} />
+        <Route exact path='/' component={App} />
+        <Route path='/home' component={Home} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
       </div>

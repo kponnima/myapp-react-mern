@@ -25,11 +25,11 @@ class Login extends Component {
 
     const { username, password } = this.state;
 
-    axios.post('/api/signin', { username, password })
+    axios.post('/api/auth/login', { username, password })
       .then((result) => {
         localStorage.setItem('jwtToken', result.data.token);
         this.setState({ message: '' });
-        this.props.history.push('/')
+        this.props.history.push('/home')
       })
       .catch((error) => {
         if(error.response.status === 401) {
@@ -41,21 +41,21 @@ class Login extends Component {
   render() {
     const { username, password, message } = this.state;
     return (
-      <div class="container">
-        <form class="form-signin" onSubmit={this.onSubmit}>
+      <div className="container">
+        <form className="form-signin" onSubmit={this.onSubmit}>
           {message !== '' &&
             <div class="alert alert-warning alert-dismissible" role="alert">
               { message }
             </div>
           }
-          <h2 class="form-signin-heading">Please sign in</h2>
-          <label for="inputEmail" class="sr-only">Email address</label>
-          <input type="email" class="form-control" placeholder="Email address" name="username" value={username} onChange={this.onChange} required/>
-          <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" class="form-control" placeholder="Password" name="password" value={password} onChange={this.onChange} required/>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+          <h2 className="form-signin-heading">Please sign in</h2>
+          <label htmlFor="username" className="sr-only">Username</label>
+          <input className="form-control" placeholder="Username" name="username" value={username} onChange={this.onChange} required/>
+          <label htmlFor="inputPassword" className="sr-only">Password</label>
+          <input type="password" className="form-control" placeholder="Password" name="password" value={password} onChange={this.onChange} required/>
+          <button className="btn btn-lg btn-primary btn-block" type="submit">Login</button>
           <p>
-            Not a member? <Link to="/register"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Register here</Link>
+            Not a member? <Link to="/register"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Register here</Link>
           </p>
         </form>
       </div>

@@ -7,7 +7,8 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var config = require('./config/database');
 
-var api = require('./routes/api');
+var home = require('./routes/home');
+var auth = require('./routes/auth');
 var app = express();
 
 mongoose.Promise = require('bluebird');
@@ -16,14 +17,17 @@ mongoose.connect(config.database, { promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
-app.use(passport.initialize());
+//app.use(passport.initialize());
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'build')));
+//app.use('/', express.static(path.join(__dirname, 'public')));
+//app.use('/api', api);
 
-app.use('/api', api);
+app.use('/api/home', home);
+app.use('/api/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

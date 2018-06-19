@@ -17,12 +17,6 @@
         },
         {
             "type": "npm",
-            "script": "mongo-win-noauth",
-            "path": "myapp/",
-            "problemMatcher": []
-        },
-        {
-            "type": "npm",
             "script": "start",
             "path": "myapp/",
             "problemMatcher": []
@@ -30,12 +24,6 @@
         {
             "type": "npm",
             "script": "start-express-server",
-            "path": "myapp/",
-            "problemMatcher": []
-        },
-        {
-            "type": "npm",
-            "script": "serve",
             "path": "myapp/",
             "problemMatcher": []
         }

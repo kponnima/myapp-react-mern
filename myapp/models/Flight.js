@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var FlightsSchema = new mongoose.Schema({
+var FlightSchema = new mongoose.Schema({
   flight_no: {
     type: Number,
     required: false
@@ -47,4 +47,4 @@ var FlightsSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Flights', FlightsSchema);
+module.exports = mongoose.model('Flights', FlightSchema);
