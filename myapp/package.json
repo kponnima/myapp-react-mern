@@ -2,7 +2,7 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kponnima.github.io/myapp",
+  "homepage": "http://kponnima.github.io/myApp-react-mern",
   "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts start",
