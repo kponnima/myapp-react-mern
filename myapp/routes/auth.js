@@ -47,7 +47,7 @@ router.post('/login', function(req, res) {
           // if user is found and password is right create a token
           var token = jwt.sign(user.toJSON(), settings.secret);
           // return the information including token as JSON
-          res.json({success: true, token: 'JWT ' + token});
+          res.json({success: true, token: 'JWT ' + token, username: req.body.username });
         } else {
           res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
         }
@@ -55,5 +55,38 @@ router.post('/login', function(req, res) {
     }
   });
 });
+
+/* GET SINGLE USER BY USERNAME */
+router.get('/profile/:username', passport.authenticate('jwt', { session: false }), function (req, res) {
+  var token = getToken(req.headers);
+  if (token) {
+    User.find(
+      { username: req.params.username },
+      { password: 0 }
+      , function (err, user) {
+        if (err) return next(err);
+        if (!user) {
+          res.status(403).send({ success: false, msg: 'Authentication failed. User not found.' });
+        } else {
+          return res.json(user);
+        }
+      });
+  } else {
+    return res.status(403).send({ success: false, msg: 'Unauthorized.' });
+  }
+});
+
+getToken = function (headers) {
+  if (headers && headers.authorization) {
+    var parted = headers.authorization.split(' ');
+    if (parted.length === 2) {
+      return parted[1];
+    } else {
+      return null;
+    }
+  } else {
+    return null;
+  }
+};
 
 module.exports = router;

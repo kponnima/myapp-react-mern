@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="jumbotron"
+  >
+    <div
+      className="container"
+    >
+      <h1>
+        Welcome to eCommerce site
+      </h1>
+      <p>
+        This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+      </p>
+      <p>
+        <a
+          className="btn btn-primary btn-lg"
+          href="#"
+          role="button"
+        >
+          Learn more »
+        </a>
+      </p>
+    </div>
+  </div>
+  <hr
+    className="featurette-divider"
+  />
+  <div
+    className="row"
+  >
+    <div
+      className="col-xs-12 col-sm-12 col-md-12"
+    >
+      <ul
+        className="nav nav-pills"
+      >
+        <li
+          className="active"
+          role="presentation"
+        >
+          <a
+            href="#"
+          >
+            Shop
+          </a>
+        </li>
+        <li
+          role="presentation"
+        >
+          <a
+            href="#"
+          >
+            Checkout
+          </a>
+        </li>
+        <li
+          role="presentation"
+        >
+          <a
+            href="#"
+          >
+            Wishlist
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr
+    className="featurette-divider"
+  />
+  <div
+    className="carousel slide"
+    data-ride="carousel"
+    id="myCarousel"
+  >
+    <ol
+      className="carousel-indicators"
+    >
+      <li
+        className="active"
+        data-slide-to="0"
+        data-target="#myCarousel"
+      />
+      <li
+        data-slide-to="1"
+        data-target="#myCarousel"
+      />
+      <li
+        data-slide-to="2"
+        data-target="#myCarousel"
+      />
+    </ol>
+    <div
+      className="carousel-inner"
+      role="listbox"
+    >
+      <div
+        className="item active"
+      >
+        <img
+          alt="First slide"
+          className="first-slide"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+        />
+        <div
+          className="container"
+        >
+          <div
+            className="carousel-caption"
+          >
+            <h1>
+              Example headline.
+            </h1>
+            <p>
+              Note: If you're viewing this page via a 
+              <code>
+                file://
+              </code>
+               URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.
+            </p>
+            <p>
+              <a
+                className="btn btn-lg btn-primary"
+                href="#"
+                role="button"
+              >
+                Sign up today
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="item"
+      >
+        <img
+          alt="Second slide"
+          className="second-slide"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+        />
+        <div
+          className="container"
+        >
+          <div
+            className="carousel-caption"
+          >
+            <h1>
+              Another example headline.
+            </h1>
+            <p>
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+            </p>
+            <p>
+              <a
+                className="btn btn-lg btn-primary"
+                href="#"
+                role="button"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="item"
+      >
+        <img
+          alt="Third slide"
+          className="third-slide"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+        />
+        <div
+          className="container"
+        >
+          <div
+            className="carousel-caption"
+          >
+            <h1>
+              One more for good measure.
+            </h1>
+            <p>
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+            </p>
+            <p>
+              <a
+                className="btn btn-lg btn-primary"
+                href="#"
+                role="button"
+              >
+                Browse gallery
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a
+      className="left carousel-control"
+      data-slide="prev"
+      href="#myCarousel"
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="glyphicon glyphicon-chevron-left"
+      />
+      <span
+        className="sr-only"
+      >
+        Previous
+      </span>
+    </a>
+    <a
+      className="right carousel-control"
+      data-slide="next"
+      href="#myCarousel"
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="glyphicon glyphicon-chevron-right"
+      />
+      <span
+        className="sr-only"
+      >
+        Next
+      </span>
+    </a>
+  </div>
+</div>
+`;
