@@ -15,6 +15,38 @@ var UserSchema = new Schema({
         type: String,
         required: true
     },
+    firstname: {
+        type: String,
+        required: true
+    },
+    middlename: {
+        type: String,
+        required: false
+    },
+    lastname: {
+        type: String,
+        required: true
+    },
+    address1: {
+        type: String,
+        required: true
+    },
+    address2: {
+        type: String,
+        required: false
+    },
+    city: {
+        type: String,
+        required: true
+    },
+    state: {
+        type: String,
+        required: true
+    },
+    zipcode: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true
@@ -22,6 +54,10 @@ var UserSchema = new Schema({
     phone: {
         type: Number,
         required: true
+    },
+    dob: {
+        type: Date,
+        required: false
     },
     date_created: {
         type: Date,

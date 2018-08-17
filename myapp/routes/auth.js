@@ -14,8 +14,17 @@ router.post('/register', function(req, res) {
     var newUser = new User({
       username: req.body.username,
       password: req.body.password,
+      firstname: req.body.firstname,
+      middlename: req.body.middlename,
+      lastname: req.body.lastname,
+      address1: req.body.address1,
+      address2: req.body.address2,
+      city: req.body.city,
+      state: req.body.addressstate,
+      zipcode: req.body.zipcode,
       email: req.body.email,
       phone: req.body.phone,
+      dob: req.body.dob,
       date_created: req.body.date_created,
       role_id: req.body.role_id,
       privilege_id: req.body.privilege_id,
@@ -24,7 +33,7 @@ router.post('/register', function(req, res) {
     // save the user
     newUser.save(function(err) {
       if (err) {
-        console.log(err);
+        //console.log(err);
         return res.json({success: false, msg: 'Username already exists.'});
       }
       res.json({success: true, msg: 'Successful created new user.'});

@@ -12,6 +12,7 @@ class Footer extends Component {
               <p>&copy; 2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
             </ul>
             <ul className="nav navbar-nav navbar-right">
+              <li><Link to="#">App version: {React.version}</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contactus">Contact Us</Link></li>
             </ul>
