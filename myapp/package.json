@@ -1,6 +1,6 @@
 {
   "name": "myapp",
-  "version": "1.1",
+  "version": "1.0.0",
   "private": true,
   "homepage": "http://kponnima.github.io/myApp-react-mern",
   "proxy": "http://localhost:3001",
@@ -10,33 +10,51 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-express-server": "node ./bin/www",
-    "mongo-win": "md mongo-db & \"C:/Program Files/MongoDB/Server/3.6/bin/mongod.exe\" --auth --port 27017 --dbpath mongo-db",
+    "mongo-win": "md mongo-db & \"C:/Program Files/MongoDB/Server/4.2/bin/mongod.exe\" --auth --port 27017 --dbpath mongo-db",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "bcrypt-nodejs": "0.0.3",
-    "bluebird": "^3.5.2",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.3.4",
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.6.11",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.1.1",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "bootstrap": "~4.1.3",
-    "gh-pages": "^1.2.0",
-    "jest": "^23.4.1",
+    "gh-pages": "^2.1.1",
     "mongoose-auto-increment": "^5.0.1",
-    "react-bootstrap": "^0.32.4",
-    "react-test-renderer": "^16.5.2"
+    "node-sass": "^4.12.0",
+    "popper.js": "^1.15.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-test-renderer": "^16.9.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

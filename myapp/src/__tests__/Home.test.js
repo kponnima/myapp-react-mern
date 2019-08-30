@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './../_components/Home';
+import Home from './../components/Home';
 
 import renderer from 'react-test-renderer';
 

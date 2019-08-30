@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var bcrypt = require('bcrypt-nodejs');
+let bcrypt = require('bcrypt');
 var autoIncrement = require('mongoose-auto-increment');
 
 autoIncrement.initialize(mongoose.connection);
@@ -84,7 +84,7 @@ UserSchema.pre('save', function (next) {
             if (err) {
                 return next(err);
             }
-            bcrypt.hash(user.password, salt, null, function (err, hash) {
+            bcrypt.hash(user.password, salt, function (err, hash) {
                 if (err) {
                     return next(err);
                 }
