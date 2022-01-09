@@ -1,54 +1,32 @@
 {
   "name": "myapp",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
-  "homepage": "http://kponnima.github.io/myApp-react-mern",
-  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "web-vitals": "^2.1.3"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "start-express-server": "node ./bin/www",
-    "mongo-win": "md mongo-db & \"C:/Program Files/MongoDB/Server/4.2/bin/mongod.exe\" --auth --port 27017 --dbpath mongo-db",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "dependencies": {
-    "axios": "^0.19.0",
-    "bcrypt": "^3.0.6",
-    "bluebird": "^3.5.5",
-    "body-parser": "^1.19.0",
-    "bootstrap": "^4.3.1",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "jquery": "^3.4.1",
-    "mongoose": "^5.6.11",
-    "morgan": "^1.9.1",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.1.1",
-    "serve-favicon": "^2.5.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "mongoose-auto-increment": "^5.0.1",
-    "node-sass": "^4.12.0",
-    "popper.js": "^1.15.0",
-    "react-bootstrap": "^1.0.0-beta.12",
-    "react-test-renderer": "^16.9.0"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
-      "not ie <= 11",
       "not op_mini all"
     ],
     "development": [
