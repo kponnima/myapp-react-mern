@@ -1,0 +1,15 @@
+---
+version: "3.8"
+
+services:
+  app:
+    container_name: myapp-react-mern
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 80:80
+    environment:
+      NODE_ENV: production

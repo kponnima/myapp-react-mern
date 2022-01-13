@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-react-mern
+  namespace: myapps-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp-react-mern
+  template:
+    metadata:
+      labels:
+        app: myapp-react-mern
+    spec:
+      containers:
+        - name: myapp-react-mern
+          image: docker.io/kponnima86/myapp-react-mern:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "300m"
+            limits:
+              memory: "200Mi"
+              cpu: "600m"
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-react-mern
+  namespace: myapps-ns
+spec:
+  selector:
+    app: myapp-react-mern
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      nodePort: 31000
