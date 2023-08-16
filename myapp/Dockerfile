@@ -3,7 +3,7 @@ FROM node:lts-alpine AS builder
 ENV NODE_ENV production
 
 # Set the working directory.
-WORKDIR /usr/local/app
+WORKDIR /app
 
 # Install app dependencies
 COPY ./package*.json ./
@@ -23,7 +23,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # Copy static assets from builder stage
-COPY --from=builder /usr/local/app/build .
+COPY --from=builder /app/build .
 
 # Containers run nginx with global directives and daemon off
 CMD ["nginx", "-g", "daemon off;"]

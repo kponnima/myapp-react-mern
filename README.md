@@ -26,15 +26,14 @@ Personal project using ReactJS to render SPA using the below key components.
 * Run `ng start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source[`\src`] files.
 
   To test docker build locally
-* Run `docker build -t myapp-react-mern .` to build locally.
+* Run `docker build --pull -t kponnima86/myapp-react-mern:latest .` to build locally.
 * Run `docker run --rm -it -p 8080:80 react-nginx` to  run locally.
 * Navigate to `http://localhost:8080`.
 ---
 ## Docker/Kubernetes build
-* Run `docker build -t myapp-react-mern .` to create docker image.
+* Run `docker build --pull -t kponnima86/myapp-react-mern:latest .` to create docker image.
 
 -- Docker Hub
-* Run `docker tag myapp-react-mern kponnima86/myapp-react-mern:latest` to tag the image with hostname & port of docker registry(docker hub).
 * Run `docker login` to connect to docker registry.
 * Run `docker push kponnima86/myapp-react-mern:latest` to push the image to local docker registry.
 

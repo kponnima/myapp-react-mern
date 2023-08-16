@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: myapp-react-mern
   namespace: myapps-ns
+  labels:
+    app: myapp-react-mern
 spec:
   replicas: 2
   selector:
@@ -16,9 +18,9 @@ spec:
       containers:
         - name: myapp-react-mern
           image: docker.io/kponnima86/myapp-react-mern:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           resources:
             requests:
               memory: "100Mi"
@@ -27,7 +29,6 @@ spec:
               memory: "200Mi"
               cpu: "600m"
       restartPolicy: Always
-
 ---
 apiVersion: v1
 kind: Service
@@ -39,7 +40,7 @@ spec:
     app: myapp-react-mern
   type: NodePort
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 80 # forwarded port
+      targetPort: 8080
       protocol: TCP
-      nodePort: 31000
+      nodePort: 32001 #Within default 30000-32767 minikube range. Port 30000 is taken for minikube's dashboard.
